@@ -32,9 +32,16 @@ class MainActivity : AppCompatActivity() {
         clickBtn.setOnClickListener {
             Log.d("메인화면로그","로그인 시도")
 
+//            아이디 입력값, 비번 입력값을 각각의 변수에 저장
+
             val inputID = contentID.text.toString()
 
             val inputPW = contentPW.text.toString()
+
+//            두개의 변수에 들어있는 값 검사(맞는 아이디, 비번)
+//            맞을 때, 틀릴 때 분기 처리(if문 활용)
+
+//            ID도 맞고, 비번도 맞아야 함
 
              if (inputID  == "admin@test.com" && inputPW == "qwer") {
 
