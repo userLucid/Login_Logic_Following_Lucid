@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         contentID.setOnClickListener {
             Log.d("메인화면로그", "아이디 입력 시도")
 
-            val inputID = contentID.text.toString()
+
 
 
         }
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         contentPW.setOnClickListener {
             Log.d("메인화면로그","비밀번호 입력 시도")
 
-            val inputPW = contentPW.text.toString()
+
 
 
         }
@@ -38,7 +38,12 @@ class MainActivity : AppCompatActivity() {
 
              if (inputID  == "admin@test.com" && inputPW == "qwer") {
 
-                Toast.makeText(this, "관리자 로그인", Toast.LENGTH_SHORT).show()
+//                 관리자 이름을 변수에 임시 저장
+            val name = "민세원"
+
+//                 둘다 맞다면 => 민세원 관리자입니다.
+
+                Toast.makeText(this, "${name}관리자 로그인", Toast.LENGTH_SHORT).show()
 
                 Log.d("관리자 로그인","로그인 성공")
 
