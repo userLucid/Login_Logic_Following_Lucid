@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         contentID.setOnClickListener {
             Log.d("메인화면로그", "아이디 입력 시도")
 
-            val inputID = contentID.toString()
+            val inputID = contentID.text.toString()
 
 
         }
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         contentPW.setOnClickListener {
             Log.d("메인화면로그","비밀번호 입력 시도")
 
-            val inputPW = contentPW.toString()
+            val inputPW = contentPW.text.toString()
 
 
         }
@@ -32,15 +32,23 @@ class MainActivity : AppCompatActivity() {
         clickBtn.setOnClickListener {
             Log.d("메인화면로그","로그인 시도")
 
-            val inputID = contentID.toString()
+            val inputID = contentID.text.toString()
 
-            val inputPW = contentPW.toString()
+            val inputPW = contentPW.text.toString()
 
              if (inputID  == "admin@test.com" && inputPW == "qwer") {
 
                 Toast.makeText(this, "관리자 로그인", Toast.LENGTH_SHORT).show()
 
                 Log.d("관리자 로그인","로그인 성공")
+
+            }
+            else {
+                Log.d("관리자 로그인","로그인 실패")
+                 Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
+
+
+
             }
 
 
